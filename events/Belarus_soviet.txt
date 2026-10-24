@@ -989,7 +989,16 @@ country_event = { #Создание ЛитБел ССР
 					}
 					annex_country = { target = PREV transfer_troops = yes }
 					set_cosmetic_tag = BLR_litbel_communism
-					set_politics = { ruling_party = communism }
+					set_politics = { ruling_party = communism } 
+					load_focus_tree = Lithuanian_Belarusian_Republic
+					add_ideas = { 
+					    BLR_work_shots_deficit 
+						BLR_Lithuanian_Belarusian_split
+						BLR_crisis_of_legitimacy
+						BLR_Sovereign_buffer 
+						BLR_counterrevolutionary_resistance
+						BLR_crisis_of_legitimacy
+					}
 					create_country_leader = { name = "Kazimierz Cichowski" desc = POL_Kazimierz_Cichowski_DESC picture = "gfx/leaders/POL/Portrait_Kazimierz_Cichowski.dds" expire = "1935.1.1" ideology = leninism traits = { cabinet_crisis soviet_thaw } }
 				}
 				every_state = {
@@ -1148,6 +1157,15 @@ country_event = { #Создание ЛитБел ССР
 				annex_country = { target = PREV transfer_troops = yes }
 				set_cosmetic_tag = BLR_litbel_communism
 				set_politics = { ruling_party = communism }
+				load_focus_tree = Lithuanian_Belarusian_Republic
+				add_ideas = { 
+				    BLR_work_shots_deficit 
+					BLR_Lithuanian_Belarusian_split
+					BLR_crisis_of_legitimacy
+					BLR_Sovereign_buffer 
+					BLR_counterrevolutionary_resistance
+					BLR_crisis_of_legitimacy
+				}
 				create_country_leader = { name = "Kazimierz Cichowski" desc = POL_Kazimierz_Cichowski_DESC picture = "gfx/leaders/POL/Portrait_Kazimierz_Cichowski.dds" expire = "1935.1.1" ideology = leninism traits = { cabinet_crisis soviet_thaw } }
 			}
 			every_state = {
@@ -1889,5 +1907,60 @@ country_event = { #Территориальная целостьность Со�
 		ai_chance = {
 			factor = 0
 		}
+	}
+} 
+country_event = { #Манифест ВРКПС
+	id = belarus_soviet.136
+	title = belarus_soviet.136.t
+	desc = belarus_soviet.136.d
+	picture = GFX_report_event_blr_manifest_vrksp
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = belarus_soviet.136.a
+		set_country_flag = Convening_of_the_united_assembly
+	}
+}
+	country_event = { #Объединительный съезд
+	id = belarus_soviet.137
+	title = belarus_soviet.137.t
+	desc = belarus_soviet.137.d
+	picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = belarus_soviet.137.a
+		
+	}
+}
+
+	country_event = { #Кандидатура Адольфа Иоффе
+	id = belarus_soviet.138
+	title = belarus_soviet.138.t
+	desc = belarus_soviet.138.d
+	picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = belarus_soviet.138.a
+		
+	}
+}
+country_event = { #Новый кабмин
+	id = belarus_soviet.139
+	title = belarus_soviet.139.t
+	desc = belarus_soviet.139.d
+	picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = belarus_soviet.139.a
+		
 	}
 }

@@ -323,10 +323,11 @@
  BLR_proletar_sudi_desc: ""
  BLR_manifest_vrksp: "Манифест ВРКСП"
  BLR_manifest_vrksp_desc: ""
+
+  #Lithiania-Belarusian SSR
  
- 
- BLR_communismmest_zased: "Совместное заседание"
- BLR_communismmest_zased_desc: ""
+ BLR_sovmest_zased: "Совместное заседание"
+ BLR_obed_zased_desc: ""
  BLR_obied_siezd: "Объединительный съезд"
  BLR_obied_siezd_desc: ""
  BLR_kanditatur_ioffe: "Кандидатура Адольфа Иоффе"
@@ -423,3 +424,4 @@
  BLR_dogovor_ger_desc: ""
  BLR_obrsh_k_che: "Обращение к Чехословакам"
  BLR_obrsh_k_che_desc: ""
+

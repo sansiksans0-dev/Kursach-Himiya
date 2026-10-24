@@ -9,2180 +9,910 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 300 y = 50 }
-	
+
 	focus = {
-		id = BLR_vtora_gramota
-		icon = GFX_BLR_vtora_gramota
-		cost = 1
-		x = 15
+		id = BLR_sovmest_zased
+		icon = GFX_BLR_sovmest_zased
+		cost = 0.8
+		available = {
+		    
+		}
+		x = 18
 		y = 0
 		completion_reward = {
-			country_event = belarus.33
+		    country_event = belarus_soviet.136
 		}
 	}
 	focus = {
-		id = BLR_tretya_gramota
-		icon = GFX_BLR_tretya_gramota
-		cost = 2
+		id = BLR_obied_siezd
+		icon = GFX_BLR_obied_siezd
+		cost = 0.8
 		prerequisite = {
-			focus =  BLR_vtora_gramota
+			focus = BLR_sovmest_zased
 		}
-		x = 15
+		available = {
+		has_country_flag = Convening_of_the_united_assembly
+		}
+		x = 17
 		y = 1
 		completion_reward = {
-			country_event = belarus.34
-			hidden_effect = {
-				add_ideas = Iosif_Yurevich_Lyosik_1
-			}
+			country_event = belarus_soviet.137
 		}
 	}
 	focus = {
-		id = BLR_telegramma_kaiser
-		icon = GFX_BLR_second_telegram_to_the_Kaiser
-		cost = 3
+		id = BLR_kanditatur_ioffe
+		icon = GFX_BLR_kanditatur_ioffe
+		cost = 0.8
 		prerequisite = {
-			focus =  BLR_tretya_gramota
-		}
-		x = 15
-		y = 2
-		completion_reward = {
-			country_event = belarus.35
-		}
-	}
-	focus = {
-		id = BLR_rada_pyati
-		icon = GFX_BLR_rada_pyati
-		cost = 2
-		prerequisite = {
-			focus =  BLR_telegramma_kaiser
-		}
-		x = 15
-		y = 3
-		completion_reward = {
-			country_event = belarus.39
-			hidden_effect = {
-				country_event = { id = belarus.40 days = 2 }
-				country_event = { id = belarus.41 days = 6 }
-			}
-		}
-	}
-	focus = {
-		id = BLR_osobi_sostav_kabineta
-		icon = GFX_BLR_osobi_sostav_kabineta
-		cost = 2
-		prerequisite = {
-			focus =  BLR_rada_pyati
-		}
-		x = 15
-		y = 4
-		completion_reward = {
-			country_event = belarus.42
-			hidden_effect = {
-				country_event = { id = belarus.43 days = 12 }
-			}
-		}
-	}
-	focus = {
-		id = BLR_Ivan_sereda
-		icon = GFX_BLR_Ivan_sereda
-		cost = 2
-		prerequisite = {
-			focus = BLR_osobi_sostav_kabineta
-		}
-		mutually_exclusive = {
-			focus = BLR_Skirmunt
+			focus = BLR_sovmest_zased
 		}
 		available = {
-			always = no
-		}
-		x = 17
-		y = 5
-		completion_reward = {
-			country_event = belarus.10
-			create_country_leader = {
-				name = "Jan Sereda"
-		  		desc = "Iosif_Voronko_DESC"
-				picture = GFX_portrait_Jan_Sereda
-				ideology = social_reformism
-				traits = { Economist }
-			}
-		}
-	}
-	focus = {
-		id = BLR_Skirmunt
-		icon = GFX_BLR_Continuation_of_Skirmunts_program
-		cost = 2
-		prerequisite = {
-			focus =  BLR_osobi_sostav_kabineta
-		}
-		mutually_exclusive = {
-			focus = BLR_Ivan_sereda
-		}
-		available = {
-			always = no
-		}
-		x = 13
-		y = 5
-		completion_reward = {
-			add_political_power = 40
-			set_country_flag = BLR_Skirmunt_vlast
-			promote_character = {
-				character = Conservative_Grandee
-				ideology = conservatism
-			}
-		}
-	}
-	focus = {
-		id = BLR_uprazdnenie_sekretariate
-		icon = GFX_BLR_uprazdnenie_sekretariate
-		cost = 2
-		prerequisite = {
-			focus =  BLR_Skirmunt
-		}
-		x = 14
-		y = 6
-		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 25
-			remove_ideas = Iosif_Yakovlevich_Voronko_1
-			add_popularity = {
-				ideology = social_democracy
-				popularity = -0.05
-			}
-			hidden_effect = {
-				remove_ideas = Iosif_Yakovlevich_Voronko_2
-				remove_ideas = Iosif_Yakovlevich_Voronko_3
-			}
-		}
-	}
-	focus = {
-		id = BLR_new_secretariat
-		icon = GFX_BLR_new_secretariat
-		cost = 2
-		prerequisite = {
-			focus =  BLR_Ivan_sereda
-		}
-		x = 16
-		y = 6
-		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 25
-			add_ideas = Roman_Aleksandrovich_Skirmunt_1
-			add_ideas = Yan_Sereda_2
-			add_ideas = Iosif_Yakovlevich_Voronko_2
-			add_ideas = Lyavon_Zayac
-			add_ideas = Kiprian_kondratovich
-			add_ideas = BLR_Vasil_Zaharko
-		}
-	}
-	focus = {
-		id = BLR_litva_tariba
-		icon = GFX_BLR_litva_tariba
-		cost = 1
-		available = {
-			LIT = {
-				exists = yes
-			}
-		}
-		prerequisite = {
-			focus = BLR_tretya_gramota
-		}
-		x = 13
-		y = 3
-		completion_reward = {
-			LIT = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-			add_opinion_modifier = {
-				target = LIT
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-		}
-	}
-	focus = {
-		id = BLR_ukain_dogovor
-		icon = GFX_BLR_ukain_dogovor
-		cost = 3
-		available = {
-			UKR = {
-				exists = yes
-			}
-			NOT = { has_war_with = UKR }
-		}
-		prerequisite = {
-			focus = BLR_tretya_gramota
-		}
-		x = 17
-		y = 2
-		completion_reward = {
-			add_political_power = 30
-			add_timed_idea = {
-				idea = BLR_torgovue_otnochenie
-				days = 180
-			}
-			UKR = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-			add_opinion_modifier = {
-				target = UKR
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-		}
-	}
-	focus = {
-		id = BLR_german_dogovor
-		icon = GFX_BLR_german_dogovor
-		cost = 3
-		available = {
-			GER = {
-				exists = yes
-			}
-		}
-		prerequisite = {
-			focus = BLR_tretya_gramota
-		}
-		x = 12
-		y = 2
-		completion_reward = {
-			add_timed_idea = {
-				idea = BLR_torgovue_otnochenie_s_germany
-				days = 180
-			}
-			GER = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-			add_opinion_modifier = {
-			target = GER
-			modifier = BLR_Ylychenie_otnocheniy
-			}
-		}
-	}
-	focus = {
-		id = BLR_delegations_Kiev
-		icon = GFX_BLR_delegations_Kiev
-		cost = 2
-		available = {
-			UKR = {
-				exists = yes
-			}
-			NOT = { has_war_with = UKR }
-		}
-		prerequisite = {
-			focus = BLR_ukain_dogovor
-		}
-		x = 17
-		y = 3
-		completion_reward = {
-			UKR = { 
-				country_event = belarus.17
-			}
-			UKR = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-			add_opinion_modifier = {
-				target = UKR
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-		}
-	}
-	focus = {
-		id = BLR_delegations_Berlin
-		icon = GFX_BLR_delegations_Berlin
-		cost = 2
-		available = {
-			GER = {
-				exists = yes
-			}
-			is_subject_of = GER
-		}
-		prerequisite = {
-			focus =  BLR_german_dogovor
-		}
-		x = 11
-		y = 3
-		completion_reward = {
-			add_political_power = 30
-			add_stability = 0.08
-			GER = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-			add_opinion_modifier = {
-				target = GER
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-		}
-	}
-	focus = {
-		id = BLR_Projekt_Genral_Kondratovich
-		icon = GFX_BLR_Projekt_Genral_Kondratovich
-		cost = 2
-		prerequisite = {
-			focus = BLR_new_secretariat
-			focus = BLR_uprazdnenie_sekretariate
-		}
-		x = 16
-		y = 7
-		completion_reward = {
-			country_event = belarus.12
-			custom_effect_tooltip = BLR_Projekt_Genral_Kondratovich_tt
-		}
-	}
-	focus = {
-		id = BLR_new_zasedanie_rada
-		icon = GFX_BLR_new_zasedanie_rada
-		cost = 2
-		available = {
-			GER = { has_country_flag = GER_monarchy_fall }
-		}
-		prerequisite = {
-			focus = BLR_new_secretariat
-			focus = BLR_uprazdnenie_sekretariate
-		}
-		x = 14
-		y = 7
-		completion_reward = {
-			country_event = { id = belarus.2  days = 3 }
-			if = {
-				limit = { NOT = { has_completed_focus = BLR_Skirmunt } }
-				hidden_effect = { country_event = { id = belarus.11 days = 3 } }
-			}
-		}
-	}
-	
-	focus = {
-		id = BLR_pokidanie_Minska
-		icon = GFX_BLR_pokidanie_Minska
-		cost = 0
-		prerequisite = {
-			focus = BLR_new_zasedanie_rada
-		}
-		mutually_exclusive = {
-			focus = BLR_deff_of_Minsk
-		}
-		available = {
-			#RUS = {
-			#	has_completed_focus = RUS_break_brest_peace
-			#}
-			always = no
-		}
-		x = 10
-		y = 8
-		completion_reward = {
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-	focus = {
-		id = BLR_lit_credits
-		icon = GFX_BLR_lit_credits
-		cost = 2
-		prerequisite = {
-			focus = BLR_pokidanie_Minska
-		}
-		allow_branch = {
-			has_completed_focus = BLR_pokidanie_Minska
-		}
-		available = {
-			is_government_in_exile = yes
-			country_exists = LIT
-			NOT = { has_war_with = LIT }
-		}
-		ai_will_do = {
-			base = 1
-		}
-		x = 10
-		y = 9
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	focus = {
-		id = BLR_sozdanie_bel_army_litva
-		icon = GFX_BLR_sozdanie_bel_army_litva
-		cost = 3.2
-		prerequisite = {
-			focus = BLR_pokidanie_Minska
-		}
-		allow_branch = {
-			has_completed_focus = BLR_pokidanie_Minska
-		}
-		available = {
-			country_exists = LIT
-			is_exiled_in = LIT
-			NOT = { has_war_with = LIT }
-			NOT = { LIT = { has_completed_focus = LIT_form_bel_army } }
-		}
-		bypass = {
-		    LIT = { has_completed_focus = LIT_form_bel_army }
-		}
-		x = 14
-		y = 9
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_legitimacy = 10
-			if = {
-				limit = { is_government_in_exile = no }
-			    division_template = {
-				    name = "Belarusian infantry regiments"
-				    regiments = {
-					    infantry = { x = 0 y = 0 }
-					    infantry = { x = 0 y = 1 }
-				    }
-				    support = {
-					    recon = { x = 0 y = 0 }
-					    engineer = { x = 0 y = 1 }
-				    }
-				    is_locked = yes
-			    }
-			    capital_scope = {
-				    create_unit = {
-					    division = "name = \"Pervyj belorusskij polk\" division_template = \"Belarusian infantry regiments\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
-					    owner = BLR
-				    } 
-				    create_unit = {
-					    division = "name = \"Vtoroj belorusskij polk\" division_template = \"Belarusian infantry regiments\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
-					    owner = BLR
-				    }
-			    }
-			}
-			else_if = {
-				limit = { is_government_in_exile = yes }
-				LIT = { country_event = belarus.128 }
-				LIT = {
-			        division_template = {
-				        name = "Belarusian infantry regiments"
-				        regiments = {
-					        infantry = { x = 0 y = 0 }
-					        infantry = { x = 0 y = 1 }
-				        }
-				        support = {
-					        recon = { x = 0 y = 0 }
-					        engineer = { x = 0 y = 1 }
-				        }
-				        is_locked = yes
-			        }
-                    set_nationality = {
-                        target_country = LIT
-                        character = BLR_ezovitov_konstantin
-                    }
-			        capital_scope = {
-				        create_unit = {
-					        division = "name = \"Pervyj belorusskij polk\" division_template = \"Belarusian infantry regiments\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
-					        owner = LIT
-				        } 
-				        create_unit = {
-					        division = "name = \"Vtoroj belorusskij polk\" division_template = \"Belarusian infantry regiments\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
-					        owner = LIT
-				        }
-			        }
-				}
-			}
-		}
-	}
-	focus = {
-		id = BLR_rechit_problem_cadrs
-		icon = GFX_BLR_rechit_problem_cadrs
-		cost = 3
-		prerequisite = {
-			focus = BLR_pokidanie_Minska
-		}
-		allow_branch = {
-			has_completed_focus = BLR_pokidanie_Minska
-		}
-		available = {
-			has_political_power > 20
-			is_government_in_exile = yes
-		}
-		
-		x = 4
-		y = 9
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_political_power = -20
-			add_stability = 0.06
-			add_manpower = 300
-		}
-	}
-	focus = {
-		id = BLR_vopros_ob_aftonomii
-		icon = GFX_BLR_vopros_ob_aftonomii
-		cost = 3
-		prerequisite = {
-			focus = BLR_rechit_problem_cadrs
-		}
-		available = {
-			is_government_in_exile = yes
-			country_exists = LIT
-			NOT = { has_war_with = LIT }
-			NOT = { 
-				is_in_faction_with = POL 
-			    is_puppet_of = POL
-			} 
-			LIT = {
-				has_opinion = {
-					target = BLR
-					value > 29
-				}
-			}
-			has_legitimacy > 40
-		} 
-		x = 2
-		y = 10
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			LIT = { country_event = belarus.50 }
-		}
-	}
-	focus = {
-		id = BLR_anti_sovet_propogand
-		icon = GFX_BLR_anti_sovet_propogand
-		cost = 2
-		prerequisite = {
-			focus = BLR_rechit_problem_cadrs
-		}
-		available = {
-		}		 
-		x = 4
-		y = 10
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_legitimacy = 10
-				every_owned_state = {
-					limit = { 
-						NOT = { is_controlled_by_ROOT_or_ally = yes }
-						OR = {
-							state = 1455
-							state = 980
-							state = 207
-							state = 1051
-							state = 96
-							state = 1401
-							state = 241
-							state = 955
-							state = 94
-							state = 922
-							state = 1168
-							state = 924
-							state = 1167
-							state = 206
-							state = 194
-							state = 1437
-							state = 1443
-							state = 204
-							state = 1056
-						}
-					}
-					damage_building = {
-						type = infrastructure
-						damage = 1
-					}
-				}
-				# Отправлять уведомления о повышенном сопротивлении странам окуппантам
-			every_other_country = {
-				limit = {
-					has_war_with = ROOT
-					OR = {
-						1455 = { is_controlled_by = PREV }
-						980 = { is_controlled_by = PREV }
-						207 = { is_controlled_by = PREV }
-						1051 = { is_controlled_by = PREV }
-						96 = { is_controlled_by = PREV }
-						1401 = { is_controlled_by = PREV }
-						241 = { is_controlled_by = PREV }
-						955 = { is_controlled_by = PREV }
-						94 = { is_controlled_by = PREV }
-						922 = { is_controlled_by = PREV }
-						1168 = { is_controlled_by = PREV }
-						924 = { is_controlled_by = PREV }
-						1167 = { is_controlled_by = PREV }
-						206 = { is_controlled_by = PREV }
-						194 = { is_controlled_by = PREV }
-						1437 = { is_controlled_by = PREV }
-						1443 = { is_controlled_by = PREV }
-						204 = { is_controlled_by = PREV }
-						1056 = { is_controlled_by = PREV }
-					}
-				}
-				country_event = {
-					id = belarus.53
-					hours = 2
-					random_hours = 12
-				}
-			}
-		}
-	}
-	focus = {
-		id = BLR_organizovat_vosstanie_regions
-		icon = GFX_BLR_organizovat_vosstanie_regions
-		cost = 3.5
-		prerequisite = {
-			focus = BLR_anti_sovet_propogand
-		}
-		available = {
-		}
-		x = 4
-		y = 11
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			custom_effect_tooltip = ETH_organize_regional_revolts_tt
-			set_country_flag = BLR_zeleno_dubci_vostan
-		}
-	}
-	focus = {
-		id = BLR_delegation_or_CHE
-		icon = GFX_BLR_delegation_or_CHE
-		cost = 2
-		prerequisite = {
-			focus = BLR_lit_credits
-		}
-		available = {
-			country_exists = CZE
-			NOT = { has_war_with = CZE }
-		}	
-		ai_will_do = {
-			base = 1
-		}
-        bypass = {
-		    NOT = { country_exists = CZE }
-        }		
-		x = 6
-		y = 10
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			CZE = {
-				country_event = rcw.204
-			}
-		}
-	}
-	focus = {
-		id = BLR_baltic_priznanie
-		icon = GFX_BLR_baltic_priznanie
-		cost = 2
-		prerequisite = {
-			focus = BLR_delegation_or_CHE
-		}
-		available = {
-			OR = {
-				AND = {
-					country_exists = EST
-					NOT = { has_war_with = EST }
-				}
-				AND = {
-					country_exists = LAT
-					NOT = { has_war_with = LAT }
-				}
-			}
-		}
-		bypass = {
-		    AND = {
-		        LAT = { OR = { has_government = communism has_government = radical_socialism } }
-			    EST = { OR = { has_government = communism has_government = radical_socialism } }
-			}
-        }	
-		ai_will_do = {
-			base = 1
-		}
-		x = 6
-		y = 11
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-		    if = {
-			    limit = { LAT = { country_exists = yes NOT = { has_government = communism has_government = radical_socialism } } }
-			    LAT = {
-				    country_event = rcw.204
-			    }
-			}
-		    if = {
-			    limit = { EST = { country_exists = yes NOT = { has_government = communism has_government = radical_socialism } } }
-			    EST = {
-				    country_event = rcw.204
-			    }
-			}
-		}
-	}
-	focus = {
-		id = BLR_peregovors_balahovich
-		icon = GFX_BLR_peregovors_balahovich
-		cost = 2
-		prerequisite = {
-			focus = BLR_baltic_priznanie
-		}
-		available = {
-			NWA = { OR = { exists = no has_capitulated = yes } }
-		}
-		ai_will_do = {
-			base = 10
-			modifier = { add = 10 NOT = { country_exists = NWA } }
-			modifier = { add = 999 date > 1919.10.1 }
-		}
-		bypass = {
-			OR = {
-			    has_country_flag = BLR_peregovor_s_bulak
-				has_country_flag = BLR_pol_verbyyt_bulak
-			}
-		}
-		x = 4
-		y = 12
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			country_event = { id = belarus.54 days = 2 }
-		}
-	}
-	focus = {
-		id = BLR_polyshenie_ukr_credits
-		icon = GFX_BLR_polyshenie_ukr_credits
-		cost = 2
-		prerequisite = {
-			focus = BLR_baltic_priznanie
-		}
-		available = {
-			country_exists = UKR
-			NOT = { has_war_with = UKR }
-		}
-		x = 6
-		y = 12
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_political_power = 50
-			UKR = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-			add_opinion_modifier = {
-				target = UKR
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-		} 
-	}
-	focus = {
-		id = BLR_delegation_or_to_paris
-		icon = GFX_BLR_delegation_or_to_paris
-		cost = 2.8
-		prerequisite = {
-			focus = BLR_lit_credits
-		}		
-		available = {
-			country_exists = FRA
-			has_political_power > 50
-			OR = { has_global_flag = WWI_is_now has_global_flag = WWI_GER_HAS_CAPITULATED }
-			NOT = { has_war_with = ENG has_war_with = USA has_war_with = FRA }
-		}
-		x = 8
-		y = 10
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_political_power = -60
-			country_event = belarus.60
-		}
-	}
-	focus = {
-		id = BLR_prosit_ob_priznanii
-		icon = GFX_BLR_prosit_ob_priznanii
-		cost = 3
-		prerequisite = {
-			focus = BLR_delegation_or_to_paris
-		}
-		available = {
-			OR = { NOT = { is_in_faction_with = POL } NOT = { is_puppet_of = POL } }
-			country_exists = FRA
-			FRA = {
-				has_opinion = {
-					target = BLR
-					value > -11
-				}
-			}
-			ENG = { is_subject = no }
-			FRA = { is_subject = no }
-			OR = { has_global_flag = WWI_is_now has_global_flag = WWI_GER_HAS_CAPITULATED }
-			NOT = {has_war_with = ENG has_war_with = USA has_war_with = FRA}
-		}
-		x = 8
-		y = 11
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			FRA = { country_event = belarus.61 }
-		}
-	}
-	focus = {
-		id = BLR_obosnovatsa_v_grodno
-		icon = GFX_BLR_obosnovatsa_v_grodno
-		cost = 2
-		prerequisite = {
-			focus = BLR_lit_credits
-		}
-		available = {
-			is_government_in_exile = yes
-		}
-		x = 10
-		y = 10
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			country_event = belarus.65
-		}
-	}
-	focus = {
-		id = BLR_polsko_bel_dogovor
-		icon = GFX_BLR_polsko_bel_dogovor
-		cost = 2.6
-		prerequisite = {
-			focus = BLR_obosnovatsa_v_grodno
-		}
-		available = {
-			country_exists = POL
-		}
-		bypass = {
-			NOT = { has_war_with = POL }
-		}
-		x = 10
-		y = 11
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			POL = { country_event = { id = belarus.66 days = 1 } }
-		}
-		
-		ai_will_do = {
-			base = 100
-		}
-	}
-	focus = {
-		id = BLR_siezd_grodno_or_vilno
-		icon = GFX_BLR_siezd_grodno_or_vilno
-		cost = 2.2
-		prerequisite = {
-			focus = BLR_polsko_bel_dogovor
-		}	
-		available = {
-			OR = { is_in_faction_with = POL is_puppet_of = POL }
-			country_exists = POL
-			NOT = { has_war_with = POL }
-			NOT = { has_completed_focus = BLR_poderschka_vilno_rada }
-		}
-		x = 8
-		y = 12
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			custom_effect_tooltip = BLR_siezd_vilno_grodno_tt
-			hidden_effect = {
-				country_event = { id = belarus.68 days = 3 }
-			}
-		}
-	}
-	focus = {
-		id = BLR_peregovor_warshawa
-		icon = GFX_BLR_peregovor_warshawa
-		cost = 3
-		prerequisite = {
-			focus = BLR_polsko_bel_dogovor
-		}		
-		available = {
-			country_exists = POL
-			NOT = { has_war_with = POL }
-		}
-		x = 10
-		y = 12
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			country_event = { id = belarus.67 days = 5 }
-		}
-	}
-	focus = {
-		id = BLR_sozdanie_bel_var_comission
-		icon = GFX_BLR_sozdanie_bel_var_comission
-		cost = 2.8
-		prerequisite = {
-			focus = BLR_siezd_grodno_or_vilno
-		}
-		available = {
-			country_exists = POL
-			OR = { is_in_faction_with = POL is_puppet_of = POL }
-		}
-		x = 8
-		y = 13
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_ideas = BLR_bvk
-		}
-	}
-	focus = {
-		id = BLR_army_or_poland
-		icon = GFX_BLR_army_or_poland
-		cost = 3.6
-		prerequisite = {
-			focus = BLR_sozdanie_bel_var_comission
-		}
-		available = {
-			country_exists = POL
-			NOT = { has_war_with = POL }
-			OR = { is_in_faction_with = POL is_puppet_of = POL }
-		}
-		x = 7
-		y = 14
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-		    country_event = belarus.124
-		    IF = {
-			    limit = { is_government_in_exile = yes }
-			    custom_effect_tooltip = BLR_divizia_polska_tt
-                POL = { country_event = belarus.124 }
-			}
-			else_if = {
-			    limit = { is_government_in_exile = no }
-				division_template = {
-					name = "Pekhotnya divisia"
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-					}
-					is_locked = no
-					priority = 1
-				}
-				capital_scope = {
-					create_unit = {
-						division = "name = \"Pervaya belorusskaya diviziya\" division_template = \"Pekhotnya divisia\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
-						owner = BLR
-						allow_spawning_on_enemy_provs = yes
-					}
-				}
-				recruit_character = BLR_Hasan_Konopacki
-			}
-		}
-	}
-	focus = {
-		id = BLR_lit_bel_div
-		icon = GFX_BLR_lit_bel_div
-		cost = 2.3
-		prerequisite = {
-			focus = BLR_army_or_poland
-		}
-		available = {
-			country_exists = POL
-			OR = { is_in_faction_with = POL is_puppet_of = POL }
-			is_government_in_exile = no
-			POL = { has_completed_focus = POL_lit_bel_div }
-		}
-		ai_will_do = {
-			factor = 999
-		}
-		x = 7
-		y = 15
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-            POL = { country_event = belarus.125 }
-		}
-	}
-	focus = {
-		id = BLR_soziv_rada_blr
-		icon = GFX_goal_unknown
-		cost = 3.8
-		prerequisite = {
-			focus = BLR_sozdanie_bel_var_comission
-		}
-		available = {
-			NOT = { has_government = despotism has_government = authoritarism }
-			OR = { is_in_faction_with = POL is_puppet_of = POL }
-		}		
-		x = 9
-		y = 14
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			country_event = { id = belarus.85 days = 2 }
-		}
-	}
-	
-	focus = {
-		id = BLR_poderschka_vilno_rada
-		icon = GFX_BLR_poderschka_vilno_rada
-		cost = 2.8
-		prerequisite = {
-			focus = BLR_obosnovatsa_v_grodno
-		}	
-		available = {
-			is_exiled_in = LIT
-			NOT = { has_war_with = LIT }
-			NOT = { 
-				is_in_faction_with = POL 
-			    is_puppet_of = POL
-			} 
-		}
-		ai_will_do = {
-			factor = 0
-			modifier = { factor = 100 LIT = { has_completed_focus = LIT_democration_litva } }
-		}
-		x = 12
-		y = 11
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_legitimacy = 10
-			LIT = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-		}
-	}
-	focus = {
-		id = BLR_usilit_kraevci
-		icon = GFX_BLR_usilit_kraevci
-		cost = 2.6
-		prerequisite = {
-			focus = BLR_poderschka_vilno_rada
-		}	
-		available = {
-		}		
-		x = 12
-		y = 12
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-		add_stability = 0.05
-		add_popularity = {
-			ideology = conservatism
-			popularity = 0.08
-		}
-		}
-	}
-	focus = {
-		id = BLR_idea_federalization
-		icon = GFX_BLR_idea_federalization
-		cost = 3
-		prerequisite = {
-			focus = BLR_usilit_kraevci
-		}	
-		available = {
-		}		
-		x = 12
-		y = 13
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			LIT = {
-				add_opinion_modifier = {
-					target = BLR
-					modifier = BLR_Ylychenie_otnocheniy
-				}
-			}
-			add_opinion_modifier = {
-				target = LIT
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-		}
-	}
-	focus = {
-		id = BLR_pokypka_armors
-		icon = GFX_BLR_pokypka_armors
-		cost = 2.6
-		prerequisite = {
-			focus = BLR_sozdanie_bel_army_litva
-		}	
-		available = {
-			is_government_in_exile = yes
-			country_exists = LIT
-			NOT = { has_war_with = LIT }
-			is_exiled_in = LIT
-			NOT = { 
-				is_in_faction_with = POL 
-			    is_puppet_of = POL
-			} 
-			LIT = {
-				has_opinion = {
-					target = BLR
-					value > 29
-				}
-			}
-		}
-		x = 13
-		y = 10
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			unlock_decision_category_tooltip = BLR_litva_postavka
-			set_country_flag = BLR_army_or_litva_flag
-		}
-	}
-	focus = {
-		id = BLR_razvitie_program_kaevci
-		icon = GFX_BLR_razvitie_program_kaevci
-		cost = 2.6
-		prerequisite = {
-			focus = BLR_usilit_kraevci
-		}	
-		available = {
-		}		
-		x = 14
-		y = 13
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_political_power = 30
-		add_popularity = {
-			ideology = conservatism
-			popularity = 0.05
-		}
-		}
-	}
-	focus = {
-		id = BLR_sobranie_lit_ot_bel
-		icon = GFX_BLR_sobranie_lit_ot_bel
-		cost = 3.8
-		prerequisite = {
-			focus = BLR_idea_federalization
-		}
-		prerequisite = {
-			focus = BLR_razvitie_program_kaevci
-		}	
-		available = {
-			country_exists = LIT
-			NOT = { has_war_with = LIT }
-			LIT = {
-				has_opinion = {
-					target = BLR
-					value > 79
-				}
-			}
-			has_legitimacy > 50
-		}
-		x = 13
-		y = 14
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			country_event = { id = belarus.85 days = 2 }
-		}
-	}
-	focus = {
-		id = BLR_vernutsa_domoi
-		icon = GFX_BLR_Reorganization_military_Rada
-		cost = 2
-		prerequisite = {
-			focus = BLR_sobranie_lit_ot_bel
-			focus = BLR_soziv_rada_blr
-		}	
-		available = {
-			is_government_in_exile = no
-		}
-		x = 10
-		y = 15
-	
-		completion_reward = {
-			uncomplete_national_focus = {
-				focus = BLR_pokidanie_Minska
-				uncomplete_children = yes
-				refund_political_power = no
-			}
-			complete_national_focus = BLR_deff_of_Minsk
-		}
-	}
-	focus = {
-		id = BLR_mobilization_oficerstva
-		icon = GFX_BLR_mobilization_oficerstva
-		cost = 1.8
-		prerequisite = {
-			focus = BLR_sozdanie_bel_army_litva
-		}
-		available = {
-			is_government_in_exile = yes
-			is_exiled_in = LIT
-		}
-		x = 15
-		y = 10
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_war_support = 0.05
-			army_experience = 20
-			lack_of_officers_fall = yes
-			create_corps_commander = { name = "Joseph Pozharsky" id = 78902 portrait_path = "gfx/leaders/BLR/Portrait_Joseph_Pozharsky.dds" traits = { Infantry_Expert } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 4 logistics_skill = 2 }
-			create_corps_commander = { name = "Pavel Jaurit" id = 78903 portrait_path = "gfx/leaders/BLR/Portrait_pavel_jaurit.dds" traits = { Ambusher } skill = 2 attack_skill = 2 defense_skill = 3 planning_skill = 2 logistics_skill = 2 }
-		}
-	}
-	focus = {
-		id = BLR_verbovka_lydei
-		icon = GFX_BLR_verbovka_lydei
-		cost = 2.8
-		prerequisite = {
-			focus = BLR_mobilization_oficerstva
-		}
-		available = {
-			is_government_in_exile = yes
-			is_exiled_in = LIT
-		}
-		x = 15
-		y = 11
-		
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			add_political_power = -50
-			add_manpower = 10000
-			rise_mobilization_law = yes
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	focus = {
-		id = BLR_deff_of_Minsk
-		icon = GFX_BLR_deff_of_Minsk
-		cost = 0
-		prerequisite = {
-			focus = BLR_new_zasedanie_rada
-		}
-		mutually_exclusive = {
-			focus = BLR_pokidanie_Minska
-		}
-		available = {
-			#RUS = {
-			#	has_completed_focus = RUS_break_brest_peace
-			#}
-		}
-		x = 20
-		y = 8
-		completion_reward = {
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-
-	focus = {
-		id = BLR_Holding_early_elections
-		icon = GFX_BLR_Holding_early_elections
-		cost = 2
-		prerequisite = {
-			focus = BLR_deff_of_Minsk
-		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
+	      has_country_flag = Convening_of_the_united_assembly
 		}
 		x = 19
-		y = 9
+		y = 1
 		completion_reward = {
-			add_stability = 0.10
-			add_political_power = 50
+			country_event = belarus_soviet.138
 		}
 	}
+	
 	focus = {
-		id = BLR_Solving_the_problem_of_taxation
-		icon = GFX_BLR_Solving_the_problem
-		cost = 3
+		id = BLR_new_prav_kabinet
+		icon = GFX_BLR_new_prav_kabinet
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Holding_early_elections
+			focus = BLR_kanditatur_ioffe
+		}
+		prerequisite = {
+			focus = BLR_obied_siezd
+		}
+		available = {
+	   
 		}
 		x = 18
-		y = 10
+		y = 2
 		completion_reward = {
+			country_event = belarus_soviet.139
+		}
+	}
+	
+	focus = {
+		id = BLR_problem_gos_apparat
+		icon = GFX_BLR_problem_gos_apparat
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_new_prav_kabinet
+		}
+		available = {
+		    
+		}
+		x = 18
+		y = 3
+		completion_reward = {
+			add_political_power = 50
 			add_stability = 0.05
-			add_political_power = 50
+			swap_ideas = { 
+				remove_idea = BLR_Lithuanian_Belarusian_split
+				add_idea = BLR_Lithuanian_Belarusian_split_1
+		}
 		}
 	}
 	focus = {
-		id = BLR_Normalize_supplies_to_cities
-		icon = GFX_BLR_Normalize_supplies_to_cities
-		cost = 3
+		id = BLR_ispol_mest_intelegent
+		icon = GFX_BLR_zapros_kadr_rsfsr
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Solving_the_problem_of_taxation
+			focus = BLR_problem_gos_apparat
+		}
+        mutually_exclusive = {
+			focus = BLR_zapros_kadr_rsfsr
+		}
+		available = {
+		    
+		}
+		x = 17
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BLR_work_shots_deficit
+				add_idea = BLR_work_shots_deficit_1
+				}
+					swap_ideas = {
+				remove_idea = BLR_counterrevolutionary_resistance
+				add_idea = BLR_counterrevolutionary_resistance_1
+				}
+				add_stability = -0.1
+				add_popularity = {
+            ideology = social_democracy
+            popularity = 0.03
+       }
+	   		add_popularity = {
+            ideology = social_liberalism
+            popularity = 0.03
+       }
+	   		add_popularity = {
+            ideology = conservatism
+            popularity = 0.03
+       }
+		}
+	}
+	focus = {
+		id = BLR_zapros_kadr_rsfsr
+		icon = GFX_BLR_ispol_mest_intelegent
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_problem_gos_apparat
+		}
+        mutually_exclusive = {
+			focus = BLR_ispol_mest_intelegent
+		}
+		available = {
+		    
+		}
+		x = 19
+		y = 4
+		completion_reward = {
+			add_opinion_modifier = {
+			target = RUS
+            modifier = BLR_RSFSR_Workers
+			}
+            swap_ideas = {
+				remove_idea = BLR_work_shots_deficit
+				add_idea = BLR_work_shots_deficit_1
+				}
+				add_autonomy_score = {
+            value = -200
+            localization = Рабочие из РСФСР
+            } 
+			add_stability = -0.05
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = BLR_rash_otdel_milit
+		icon = GFX_BLR_rash_otdel_milit
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_zapros_kadr_rsfsr
+			focus = BLR_ispol_mest_intelegent
+		}
+		available = {
+		    
+		}
+		x = 17
+		y = 5
+		completion_reward = {
+			create_unit = {
+    2 division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.1" 
+    owner = BLR
+}
+army_experience = 10
+add_stability = 0.08
+		}
+	}
+	focus = {
+		id = BLR_kontrol_prod
+		icon = GFX_BLR_kontrol_prod
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_zapros_kadr_rsfsr
+			focus = BLR_ispol_mest_intelegent
+		}
+		available = {
+		    
+		}
+		x = 19
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_problem_prodvlst
+		icon = GFX_BLR_problem_prodvlst
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_kontrol_prod
+		}
+		available = {
+		    
+		}
+		x = 20
+		y = 6
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_ukrpl_gos_apparat
+		icon = GFX_BLR_ukrpl_gos_apparat
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_kontrol_prod
+			focus = BLR_rash_otdel_milit
+		}
+		available = {
+		    
 		}
 		x = 18
-		y = 11
+		y = 6
 		completion_reward = {
-			remove_ideas = foodstuffs_supply_crisis_2
+			remove_ideas = {
+        BLR_Lithuanian_Belarusian_split_1
+		}
 		}
 	}
 	focus = {
-		id = BLR_Writing_Belarusian_Constitution
-		icon = GFX_BLR_Writing_Belarusian_Constitution
-		cost = 3
-		mutually_exclusive = {
-			focus = BLR_ukaz_pravitela
-		}
+		id = BLR_rashr_agitation
+		icon = GFX_BLR_rashr_agitation
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Holding_early_elections
+			focus = BLR_rash_otdel_milit
 		}
-		x = 20
-		y = 10
+		available = {
+		    
+		}
+		x = 16
+		y = 6
 		completion_reward = {
-			add_ideas = constitution_b_law
+			remove_ideas = {
+			BLR_work_shots_deficit_1
+			}
+			add_political_power = 20
+			}
+		
+	}
+	focus = {
+		id = BLR_prosvsh_v_derevnyah
+		icon = GFX_BLR_prosvsh_v_derevnyah
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_rashr_agitation
+		}
+		available = {
+		    
+		}
+		x = 15
+		y = 7
+		completion_reward = {
+			add_ideas = {  
+			BLR_prosvet_v_derevne
+		}
 		}
 	}
 	focus = {
-		id = BLR_Financing_Belarusian_schools
-		icon = GFX_BLR_Financing_Belarusian_schools
-		cost = 3
+		id = BLR_kontr_rev_borbya
+		icon = GFX_BLR_kontr_rev_borbya
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Writing_Belarusian_Constitution
+			focus = BLR_ukrpl_gos_apparat
 		}
-		x = 20
-		y = 11
+		prerequisite = {
+			focus = BLR_rashr_agitation
+		}
+		available = {
+		    
+		}
+		x = 17
+		y = 7
 		completion_reward = {
-			add_political_power = 50
-			add_ideas = cities_averange_education
+				swap_ideas = {
+				remove_idea = BLR_counterrevolutionary_resistance
+				remove_idea = BLR_counterrevolutionary_resistance_1
+				add_idea = BLR_counterrevolutionary_resistance_2
+				}
 		}
 	}
 	focus = {
-		id = BLR_Reform_the_zemstvo
-		icon = GFX_BLR_Reform_the_zemstvo
-		cost = 3
+		id = BLR_krasny_terror
+		icon = GFX_BLR_krasny_terror
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Normalize_supplies_to_cities
-			focus = BLR_Financing_Belarusian_schools
+			focus = BLR_kontr_rev_borbya
 		}
-		x = 18
-		y = 12
+		available = {
+		    
+		}
+		x = 17
+		y = 8
 		completion_reward = {
-			add_stability = 0.1
+			remove_ideas = BLR_counterrevolutionary_resistance
+			remove_ideas = BLR_counterrevolutionary_resistance_1
+			remove_ideas = BLR_counterrevolutionary_resistance_2   
+			add_ideas = BLR_Red_Terror
 		}
 	}
 	focus = {
-		id = BLR_Promoting_idea_selfawareness
-		icon = GFX_BLR_Promoting_idea
-		cost = 3
+		id = BLR_deistv_kont_razvedk
+		icon = GFX_BLR_deistv_kont_razvedk
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Normalize_supplies_to_cities
-			focus = BLR_Financing_Belarusian_schools
+			focus = BLR_ukrpl_gos_apparat
 		}
-		x = 20
-		y = 12
+		available = {
+		    
+		}
+		x = 19
+		y = 7
 		completion_reward = {
-			remove_ideas = BLR_weak_idea
-		}
-	}
-	#focus = {
-	#	id = BLR_Delegation_to_Paris
-	#	icon = GFX_BLR_Delegation_to_Paris
-	#	cost = 2
-	#	prerequisite = {
-	#	}
-	#	x = 
-	#	y = 
-	#	completion_reward = {
-	#		
-	#	}
-	#}
-	#focus = {
-	#	id = BLR_Belarusian_Lithuanian_friendship
-	#	icon = GFX_BLR_Belarusian_Lithuanian_friendship
-	#	cost = 2
-	#	prerequisite = {
-	#	}
-	#	x = 
-	#	y = 
-	#	completion_reward = {
-	#		
-	#	}
-	#}
-	focus = {
-		id = BLR_Minsk_Technical_Institute
-		icon = GFX_BLR_Minsk_Technical_Institute
-		cost = 3
-		prerequisite = {
-			focus = BLR_Promoting_idea_selfawareness
-		}
-		x = 20
-		y = 13
-		completion_reward = {
-			add_research_slot = 1
+			add_ideas = { 
+			BLR_CHK_LitBel
+			}
 		}
 	}
 
+
 	focus = {
-		id = BLR_New_Economic_Committee
-		icon = GFX_BLR_New_Economic_Committee
-		cost = 3
+		id = BLR_ukr_econom_poloshenie
+		icon = GFX_BLR_ukr_econom_poloshenie
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_deff_of_Minsk
-		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
-		}
-		x = 13
-		y = 9
-		completion_reward = {
-			add_ideas = BLR_economic_comite
-		}
-	}
-	focus = {
-		id = BLR_Militarization_industry
-		icon = GFX_BLR_Militarization_industry
-		cost = 5
-		prerequisite = {
-			focus = BLR_New_Economic_Committee
+			focus = BLR_new_prav_kabinet
 		}
 		available = {
-			any_state = { is_controlled_by = ROOT }
-		}
-		x = 11
-		y = 10
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-		}
-	}
-	focus = {
-		id = BLR_Logoi_Weaving_Factory
-		icon = GFX_BLR_Logoi_Weaving_Factory
-		cost = 4
-		prerequisite = {
-			focus = BLR_New_Economic_Committee
-		}
-		available = {
-			controls_state = 206
+		    
 		}
 		x = 14
-		y = 10
+		y = 3
 		completion_reward = {
-			206 = {
-				add_building_construction = {
-					type = industrial_complex 
-					level = 1
-				}
-			}
+			add_war_support = 0.05
+			add_political_power = 50
+			add_stability = 0.03
+            add_ideas = BLR_ukr_econom_poloshenie
+			add_ideas = war_economy
+			add_tech_bonus = {
+	    name = industry_bonus
+	    bonus = 1
+	    uses = 1
+	    category = industry
+}
 		}
 	}
 	focus = {
-		id = BLR_Support_for_local_industries
-		icon = GFX_BLR_Support_for_local_industries
-		cost = 3
+		id = BLR_preksrsh_razboi
+		icon = GFX_BLR_preksrsh_razboi
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Militarization_industry
-			focus = BLR_Logoi_Weaving_Factory
+			focus = BLR_ukr_econom_poloshenie
 		}
 		available = {
-			any_state = { is_controlled_by = ROOT }
+		    
+		}
+		x = 14
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_kolectivny_gos_hoz
+		icon = GFX_BLR_kolectivny_gos_hoz
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_preksrsh_razboi
+		}
+        mutually_exclusive = {
+			focus = BLR_perespr_zemly
+		}
+		available = {
+		    
 		}
 		x = 13
-		y = 11
+		y = 5
 		completion_reward = {
-			add_stability = 0.04
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
+			
 		}
 	}
 	focus = {
-		id = BLR_Land_rights
-		icon = GFX_BLR_Land_rights
-		cost = 7
+		id = BLR_perespr_zemly
+		icon = GFX_BLR_perespr_zemly
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Militarization_industry
-			focus = BLR_Logoi_Weaving_Factory
+			focus = BLR_preksrsh_razboi
 		}
-		bypass = {
-			has_idea = small_farms
+        mutually_exclusive = {
+			focus = BLR_kolectivny_gos_hoz
 		}
-		x = 9
-		y = 11
-		completion_reward = {
-			add_ideas = small_farms
-			add_popularity = { ideology = ROOT popularity = 0.04 }
-			add_stability = -0.04
-		}
-	}
-	focus = {
-		id = BLR_Support_peasant_cooperation
-		icon = GFX_BLR_Support_peasant_cooperation
-		cost = 3
-		prerequisite = {
-			focus = BLR_Support_for_local_industries
-		}
-		x = 11
-		y = 12
-		completion_reward = {
-			add_ideas = BLR_cooperation
-		}
-	}
-	focus = {
-		id = BLR_Insurance_for_workers
-		icon = GFX_BLR_Insurance_for_workers
-		cost = 3
-		prerequisite = {
-			focus = BLR_Support_for_local_industries
-		}
-		x = 13
-		y = 12
-		completion_reward = {
-			add_ideas = RSS_insurance_funds_idea
-		}
-	}
-	focus = {
-		id = BLR_Introduction_early_mobilization
-		icon = GFX_BLR_Introduction_early_mobilization
-		cost = 3
-		prerequisite = {
-			focus = BLR_Support_for_local_industries
+		available = {
+		    
 		}
 		x = 15
-		y = 12
+		y = 5
 		completion_reward = {
-			add_war_support = 0.08
-			add_stability = -0.05
-			add_ideas = low_economic_mobilisation
+			
 		}
 	}
 	focus = {
-		id = BLR_resume_the_work_of_banks
-		icon = GFX_BLR_resume_the_work_of_banks
-		cost = 3
+		id = BLR_trudova_povinnost
+		icon = GFX_BLR_trudova_povinnost
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_deff_of_Minsk
+			focus = BLR_ukr_econom_poloshenie
 		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
+		available = {
+		    
 		}
-		x = 16
-		y = 9
+		x = 12
+		y = 4
 		completion_reward = {
-			add_ideas = BLR_banks
+			add_ideas = BLR_trudova_povinnost
 		}
 	}
 	focus = {
-		id = BLR_Restoration_railway_tracks
-		icon = GFX_BLR_Restoration_railway_tracks
-		cost = 3
+		id = BLR_trudova_army
+		icon = GFX_BLR_trudova_army
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_New_Economic_Committee
+			focus = BLR_trudova_povinnost
 		}
-		x = 16
-		y = 10
+		available = {
+		    
+		}
+		x = 12
+		y = 6
 		completion_reward = {
-			build_railway = {
-			level = 2
-			build_only_on_allied = yes
-			controller_priority = {
-				base = 1
-				modifier = {
-					tag = BLR
-					add = 2
-				}
-			}
-			fallback = yes
-			path = { 11370 15499 386 6292 3350 3378 6373 }
-			start_province = 11370
-			target_province = 6373
-		}
-			build_railway = {
-			level = 2
-			build_only_on_allied = yes
-			controller_priority = {
-				base = 1
-				modifier = {
-					tag = BLR
-					add = 2
-				}
-			}
-			fallback = yes
-			path = { 11370 13671 11216 9304 }
-			start_province = 11370
-			target_province = 9304
-		}
-			build_railway = {
-			level = 1
-			build_only_on_allied = yes
-			controller_priority = {
-				base = 1
-				modifier = {
-					tag = BLR
-					add = 2
-				}
-			}
-			fallback = yes
-			path = { 6373 14958 14247 9289 3331 15500 11241 }
-			start_province = 6373
-			target_province = 11241
-		}
+			
 		}
 	}
 	focus = {
-		id = BLR_New_Administrative_division
-		icon = GFX_goal_unknown
-		cost = 3
+		id = BLR_zapros_support_centr
+		icon = GFX_BLR_zapros_support_centr
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_deff_of_Minsk
+			focus = BLR_ukr_econom_poloshenie
 		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
+		available = {
+		    
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_peshatanie_nominala
+		icon = GFX_BLR_peshatanie_nominala
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_ukr_econom_poloshenie
+		}
+		available = {
+		    
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+
+
+	focus = {
+		id = BLR_razvit_obrz
+		icon = GFX_BLR_razvit_obrz
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_new_prav_kabinet
+		}
+		available = {
+		    
 		}
 		x = 21
-		y = 9
+		y = 3
 		completion_reward = {
-			add_ideas = BLR_New_Administrative_division
+			
 		}
 	}
 	focus = {
-		id = BLR_Reorganization_military_Rada
-		icon = GFX_BLR_Reorganization_military_Rada
-		cost = 2
+		id = BLR_otkr_gos_univer
+		icon = GFX_BLR_otkr_gos_univer
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_deff_of_Minsk
+			focus = BLR_razvit_obrz
 		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
+		available = {
+		    
 		}
-		x = 30
-		y = 9
+		x = 21
+		y = 4
 		completion_reward = {
-			add_war_support = 0.05
-			add_ideas = BLR_army_idea_01
+			
+		}
+	}
+	
+	
+	
+	focus = {
+		id = BLR_ediny_kommand_sostav
+		icon = GFX_BLR_ediny_kommand_sostav
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_new_prav_kabinet
+		}
+		available = {
+		    
+		}
+		x = 25
+		y = 3
+		completion_reward = {
+			
 		}
 	}
 	focus = {
-		id = BLR_Belarusian_military_councils
-		icon = GFX_BLR_Belarusian_military_councils
-		cost = 2
+		id = BLR_krestyanu_mobilib
+		icon = GFX_BLR_krestyanu_mobilib
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Reorganization_military_Rada
+			focus = BLR_ediny_kommand_sostav
+		}
+		available = {
+		    
+		}
+		x = 25
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_prisiv_lit_bel_shyastei
+		icon = GFX_BLR_prisiv_lit_bel_shyastei
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_krestyanu_mobilib
+		}
+		available = {
+		    
+		}
+		x = 25
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_zapros_sovet_instrktr
+		icon = GFX_BLR_zapros_sovet_instrktr
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_ediny_kommand_sostav
+		}
+		available = {
+		    
 		}
 		x = 27
-		y = 10
+		y = 4
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BLR_army_idea_01
-				add_idea = BLR_army_idea_02
-			}
+			
 		}
 	}
 	focus = {
-		id = BLR_Organization_of_a_new_army
-		icon = GFX_BLR_Organization_of_a_new_army
-		cost = 3
+		id = BLR_uskoren_oficer_obych
+		icon = GFX_BLR_uskoren_oficer_obych
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Reorganization_military_Rada
+			focus = BLR_krestyanu_mobilib
 		}
 		available = {
-			any_state = { is_controlled_by = ROOT }
+		    
 		}
-		x = 29
-		y = 10
+		x = 28
+		y = 5
 		completion_reward = {
-			add_war_support = 0.05
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				} 
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				} 
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				} 
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-			}
+			
 		}
 	}
 	focus = {
-		id = BLR_Mobilization_for_land
-		icon = GFX_BLR_Mobilization_for_land
-		cost = 2
+		id = BLR_vosved_ukrpl
+		icon = GFX_BLR_vosved_ukrpl
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Reorganization_military_Rada
-		}
-		mutually_exclusive = {
-			focus = BLR_Mandatory_appeal
+			focus = BLR_ediny_kommand_sostav
 		}
 		available = {
-			any_state = { is_controlled_by = ROOT }
+		    
 		}
-		x = 31
-		y = 10
+		x = 23
+		y = 4
 		completion_reward = {
-			rise_mobilization_law = yes
-			add_ideas = BLR_mobilization_land
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-			}
+			
 		}
 	}
 	focus = {
-		id = BLR_Mandatory_appeal
-		icon = GFX_BLR_Mandatory_appeal
-		cost = 2
+		id = BLR_lit-bel_bastion
+		icon = GFX_BLR_lit-bel_bastion
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Reorganization_military_Rada
-		}
-		mutually_exclusive = {
-			focus = BLR_Mobilization_for_land
+			focus = BLR_vosved_ukrpl
 		}
 		available = {
-			any_state = { is_controlled_by = ROOT }
+		    
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_create_pol_sov_front
+		icon = GFX_BLR_create_pol_sov_front
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_lit-bel_bastion
+		}
+		prerequisite = {
+			focus = BLR_prisiv_lit_bel_shyastei
+		}
+		available = {
+		    
+		}
+		x = 24
+		y = 6
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_obsh_kommand_shtab_rsfsr
+		icon = GFX_BLR_obsh_kommand_shtab_rsfsr
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_prisiv_lit_bel_shyastei
+		}
+		available = {
+		    
+		}
+		x = 26
+		y = 6
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_partizan_metod
+		icon = GFX_BLR_partizan_metod
+		cost = 0.8
+        mutually_exclusive = {
+			focus = BLR_centr_krasny_army
+		}
+		prerequisite = {
+			focus = BLR_create_pol_sov_front
+			focus = BLR_obsh_kommand_shtab_rsfsr
+		}
+		available = {
+		    
+		}
+		x = 24
+		y = 7
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_centr_krasny_army
+		icon = GFX_BLR_centr_krasny_army
+		cost = 0.8
+        mutually_exclusive = {
+			focus = BLR_partizan_metod
+		}
+		prerequisite = {
+			focus = BLR_create_pol_sov_front
+			focus = BLR_obsh_kommand_shtab_rsfsr
+		}
+		available = {
+		    
+		}
+		x = 26
+		y = 7
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	
+	
+	
+	focus = {
+		id = BLR_pazvernut_vneshn_polit
+		icon = GFX_BLR_pazvernut_vneshn_polit
+		cost = 0.8
+		available = {
+		    
+		}
+		x = 34
+		y = 1
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_vopros_mest_rad
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_pazvernut_vneshn_polit
+		}
+		available = {
+		    
+		}
+		x = 36
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_vmesh_v_peregovor
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_pazvernut_vneshn_polit
+		}
+        mutually_exclusive = {
+			focus = BLR_razvit_commun_nastr
+		}
+		available = {
+		    
+		}
+		x = 34
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_support_pol_socialist
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_vmesh_v_peregovor
+		}
+		available = {
+		    
 		}
 		x = 33
-		y = 10
+		y = 3
 		completion_reward = {
-			add_stability = -0.04
-			rise_mobilization_law = yes
-			rise_mobilization_law = yes
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Diviziya Opolcheniya\" division_template = \"Diviziya Opolcheniya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-			}
+			
 		}
 	}
 	focus = {
-		id = BLR_Creation_of_officer_schools
-		icon = GFX_BLR_Creation_of_officer_schools
-		cost = 3
+		id = BLR_pred_o_pleibescit
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Belarusian_military_councils
-			focus = BLR_Organization_of_a_new_army
-			focus = BLR_Belarusian_military_councils
-			focus = BLR_Organization_of_a_new_army
-			focus = BLR_Mobilization_for_land
-			focus = BLR_Mandatory_appeal
-		}
-		x = 28
-		y = 11
-		completion_reward = {
-			custom_effect_tooltip = lack_of_officers_fall_2_tt
-			hidden_effect = {
-				lack_of_officers_fall = yes
-				lack_of_officers_fall = yes
-			}
-		}
-	}
-	focus = {
-		id = BLR_Recruit_regiments_greentoothed
-		icon = GFX_BLR_Recruit_regiments_greentoothed
-		cost = 2
-		prerequisite = {
-			focus = BLR_Belarusian_military_councils
-			focus = BLR_Organization_of_a_new_army
-			focus = BLR_Mobilization_for_land
-			focus = BLR_Mandatory_appeal
-		}
-		x = 30
-		y = 11
-		completion_reward = {
-			custom_effect_tooltip = BLR_Recruit_regiments_greentooth_tt
-			create_corps_commander = { name = "Uladzimir Ksianievic" id = 78901 portrait_path = "gfx/leaders/BLR/Portrait_Uladzimir_Ksianievic_military.dds" traits = { trait_engineer } skill = 1 attack_skill = 1 defense_skill = 3 planning_skill = 1 logistics_skill = 2 }
-			set_country_flag = BLR_zeleno_dubci_vostan
-		}
-	}
-	focus = {
-		id = BLR_Establishing_discipline
-		icon = GFX_BLR_Establishing_discipline
-		cost = 3
-		prerequisite = {
-			focus = BLR_Creation_of_officer_schools
-			focus = BLR_Recruit_regiments_greentoothed
+			focus = BLR_vmesh_v_peregovor
 		}
 		available = {
-			NOT = {
-				has_idea = lack_of_officers_1
-				has_idea = lack_of_officers_2
-				has_idea = lack_of_officers_3
-				has_idea = lack_of_officers_4
-				has_idea = lack_of_officers_5
-				has_idea = lack_of_officers_6
-				has_idea = lack_of_officers_7
-				has_idea = lack_of_officers_8
-				has_idea = lack_of_officers_9
-				has_idea = lack_of_officers_10
-			}
+		    
 		}
-		x = 28
-		y = 12
+		x = 35
+		y = 3
 		completion_reward = {
-			add_ideas = BLR_discipline_1
+			
 		}
 	}
 	focus = {
-		id = BLR_Creation_peoples_militia
-		icon = GFX_BLR_Creation_peoples_militia
-		cost = 3
+		id = BLR_peregovor_s_warshaw
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
 		prerequisite = {
-			focus = BLR_Belarusian_military_councils
-			focus = BLR_Organization_of_a_new_army
-			focus = BLR_Mobilization_for_land
-			focus = BLR_Mandatory_appeal
+			focus = BLR_pred_o_pleibescit
+		}
+		prerequisite = {
+			focus = BLR_support_pol_socialist
+		}
+		available = {
+		    
+		}
+		x = 34
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_obrsh_antant
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_pred_o_pleibescit
+			focus = BLR_support_pol_socialist
+		}
+		available = {
+		    
+		}
+		x = 36
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = BLR_razvit_commun_nastr
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_pazvernut_vneshn_polit
+		}
+        mutually_exclusive = {
+			focus = BLR_vmesh_v_peregovor
+		}
+		available = {
+		    
+		}
+		x = 30
+		y = 2
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_obvinenie_polsk
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_razvit_commun_nastr
+		}
+		available = {
+		    
+		}
+		x = 30
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_sotr_vrag_pol
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_razvit_commun_nastr
+		}
+		available = {
+		    
+		}
+		x = 28
+		y = 3
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_dogovor_ger
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_obvinenie_polsk
+		}
+		available = {
+		    
+		}
+		x = 30
+		y = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = BLR_obrsh_k_che
+		icon = GFX_BLR_pervi_siezd
+		cost = 0.8
+		prerequisite = {
+			focus = BLR_obvinenie_polsk
+		}
+		available = {
+		    
 		}
 		x = 32
-		y = 11
+		y = 4
 		completion_reward = {
-			add_war_support = 0.1
+			
 		}
 	}
-	focus = {
-		id = BLR_Guerrilla_tactics
-		icon = GFX_BLR_Guerrilla_tactics
-		cost = 3
-		prerequisite = {
-			focus = BLR_Creation_peoples_militia
-			focus = BLR_Recruit_regiments_greentoothed
-		}
-		available = {
-			has_war_support > 0.5
-		}
-		x = 31
-		y = 12
-		completion_reward = {
-			add_ideas = BLR_guerrilla_warfare
-		}
-	}
-	focus = {
-		id = BLR_soften_labor_legislation
-		icon = GFX_BLR_soften_labor_legislation
-		cost = 3
-		prerequisite = {
-			focus = BLR_Insurance_for_workers
-		}
-		x = 13
-		y = 13
-		completion_reward = {
-			rise_labor_legislation = yes
-		}
-	}
-	focus = {
-		id = BLR_Mechanization_agriculture
-		icon = GFX_BLR_Mechanization_agriculture
-		cost = 10
-		prerequisite = {
-			focus = BLR_Introduction_early_mobilization
-		}
-		x = 15
-		y = 13
-		completion_reward = {
-			add_ideas = agricultural_tractor
-			add_political_power = -100
-		}
-	}
-	focus = {
-		id = BLR_Complete_agrarian_reform
-		icon = GFX_BLR_Complete_agrarian_reform
-		cost = 8
-		prerequisite = {
-			focus = BLR_Land_rights
-		}
-		x = 9
-		y = 12
-		completion_reward = {
-			remove_ideas = BLR_land_question_idea
-		}
-	}
-	focus = {
-		id = BLR_Stimulate_agriculture
-		icon = GFX_BLR_Stimulate_agriculture
-		cost = 3
-		prerequisite = {
-			focus = BLR_Support_peasant_cooperation
-		}
-		prerequisite = {
-			focus = BLR_Complete_agrarian_reform
-		}
-		prerequisite = {
-			focus = BLR_Mechanization_agriculture
-		}
-		x = 11
-		y = 14
-		completion_reward = {
-			remove_ideas = BLR_appendage_idea
-		}
-	}
-	focus = {
-		id = BLR_The_New_Army
-		icon = GFX_BLR_The_New_Army
-		cost = 3
-		prerequisite = {
-			focus = BLR_Establishing_discipline
-		}
-		prerequisite = {
-			focus = BLR_Guerrilla_tactics
-		}
-		x = 30
-		y = 13
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = BLR_army_idea_02
-				add_idea = BLR_army_idea_03
-			}
-		}
-	}
-
-
-	focus = {
-		id = BLR_Kiprian
-		icon = GFX_BLR_Kiprian
-		cost = 3
-		x = 24
-		y = 9
-		prerequisite = {
-			focus = BLR_deff_of_Minsk
-		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
-			has_completed_focus = BLR_Kiprian
-		}
-		completion_reward = {
-			country_event = { id = belarus.46  days = 3 }
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	focus = {
-		id = BLR_voennoe_prav
-		icon = GFX_BLR_voennoe_prav
-		cost = 3
-		prerequisite = {
-			focus = BLR_Kiprian
-		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
-			has_completed_focus = BLR_Kiprian
-		}
-		x = 24
-		y = 10
-		completion_reward = {
-			add_ideas = Kiprian_kondratovich_2
-			add_ideas = Oleg_Petrovich_Vasilkovskij
-			add_ideas = Yan_Sereda_2
-			add_ideas = Kiprian_kondratovich_1
-			add_ideas = Lyavon_Zayac
-			add_ideas = Kiprian_kondratovich
-		}
-	}
-	focus = {
-		id = BLR_officer_iz_vne
-		icon = GFX_BLR_officer_iz_vne
-		cost = 3
-		prerequisite = {
-			focus = BLR_voennoe_prav
-		}
-		x = 24
-		y = 11
-		completion_reward = {
-			create_corps_commander = { name = "Joseph Pozharsky" id = 78902 portrait_path = "gfx/leaders/BLR/Portrait_Joseph_Pozharsky.dds" traits = { Infantry_Expert } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 4 logistics_skill = 2 }
-			create_corps_commander = { name = "Pavel Jaurit" id = 78903 portrait_path = "gfx/leaders/BLR/Portrait_pavel_jaurit.dds" traits = { Ambusher } skill = 2 attack_skill = 2 defense_skill = 3 planning_skill = 2 logistics_skill = 2 }
-			create_corps_commander = { name = "Hasan Konopacki" id = 78904 portrait_path = "gfx/leaders/BLR/Portrait_Hasan_Konopacki.dds" traits = { Adaptable } skill = 1 attack_skill = 3 defense_skill = 2 planning_skill = 1 logistics_skill = 1 }
-		}
-	}
-	focus = {
-		id = BLR_belorussian_gvardy
-		icon = GFX_BLR_belorussian_gvardy
-		cost = 3
-		prerequisite = {
-			focus = BLR_officer_iz_vne
-		}
-		available = {
-			any_state = { is_controlled_by = ROOT }
-		}
-		x = 24
-		y = 12
-		completion_reward = {
-			division_template = {
-				name = "Narodnya Gvardiya"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-				}
-				support = {
-					engineer = { x = 0 y = 0 }
-				}
-			}
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Narodnya Gvardiya\" division_template = \"Narodnya Gvardiya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Narodnya Gvardiya\" division_template = \"Narodnya Gvardiya\" start_experience_factor = 0.25 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-				}
-			}
-		}
-	}
-	focus = {
-		id = BLR_rada_support
-		icon = GFX_BLR_rada_support
-		cost = 3
-		prerequisite = {
-			focus = BLR_voennoe_prav
-		}
-		x = 26
-		y = 11
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	focus = {
-		id = BLR_army_or_litva
-		icon = GFX_BLR_army_or_litva
-		cost = 3
-		available = {
-			country_exists = LIT
-			NOT = { has_war_with = LIT }
-			LIT = {
-				has_opinion = {
-					target = BLR
-					value > 29
-				}
-			}
-		}
-		prerequisite = {
-			focus = BLR_rada_support
-		}
-		x = 26
-		y = 12
-		completion_reward = {
-			unlock_decision_category_tooltip = BLR_litva_postavka
-			set_country_flag = BLR_army_or_litva_flag
-		}
-	}
-	focus = {
-		id = BLR_ukaz_pravitela
-		icon = GFX_BLR_ukaz_pravitela
-		cost = 3
-		mutually_exclusive = {
-			focus = BLR_Writing_Belarusian_Constitution
-		}
-		prerequisite = {
-			focus = BLR_Kiprian
-		}
-		allow_branch = {
-			has_completed_focus = BLR_deff_of_Minsk
-			has_completed_focus = BLR_Kiprian
-		}
-		x = 22
-		y = 10
-		completion_reward = {
-			add_ideas = decrees_of_ruler_b_law
-		}
-	}
-	focus = {
-		id = BLR_razobratsa_s_polska
-		icon = GFX_BLR_razobratsa_s_polska
-		cost = 3
-		prerequisite = {
-			focus = BLR_ukaz_pravitela
-			focus = BLR_voennoe_prav
-		}
-		x = 22
-		y = 11
-		completion_reward = {
-			country_event = belarus.22
-		}
-	}
-	focus = {
-		id = BLR_vneshnya_political
-		icon = GFX_BLR_vneshnya_political
-		cost = 3
-		prerequisite = {
-			focus = BLR_razobratsa_s_polska
-		}
-		x = 22
-		y = 12
-		completion_reward = {
-			country_event = belarus.48
-		}
-	}
-
-}
+}5

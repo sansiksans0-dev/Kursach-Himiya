@@ -25,8 +25,6 @@ add_ideas = {
 	constitution_b_law
 	poliparty_system_law
 	neutral_foreign_policy_law
-	BLR_polska_idea
-	
 	landlordism steel_agricultural_tools
 	cities_low_literacy
 }
@@ -69,13 +67,11 @@ create_country_leader = { name = "Uladzimir Ksianievič" desc = "BLR_Uladzimir_K
 
 
 add_ideas = {
-	BLR_weak_idea
-	BLR_land_question_idea
-	BLR_polska_idea
-	BLR_appendage_idea
-	BLR_proclaimed_idea
-	foodstuffs_supply_crisis_2
-	lack_of_officers_8
+	BLR_work_shots_deficit
+	BLR_Lithuanian_Belarusian_split
+	BLR_crisis_of_legitimacy
+	BLR_Sovereign_buffer
+	BLR_counterrevolutionary_resistance
 }
 add_ideas = {
 	Yan_Sereda_1

@@ -451,4 +451,8 @@ WVA_dont_merge_with_NWA = {
 		months = 120
 		decay = 0.4
 	}
+	BLR_RSFSR_Workers = {
+		value = 50 
+	}
+	
 }

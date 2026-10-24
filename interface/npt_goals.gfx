@@ -7879,4 +7879,144 @@ spriteTypes = {
 		name = "GFX_RGR_g_third_revolution"
 		texturefile = "gfx/interface/goals/RGR/RGR_g_third_revolution.dds"
 	}
+		SpriteType = { 
+		name = "GFX_BLR_communismmest_zased"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_communismmest_zased.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_obied_siezd"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_obied_siezd.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_kanditatur_ioffe"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_kanditatur_ioffe.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_new_prav_kabinet"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_new_prav_kabinet.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_problem_gos_apparat"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_problem_gos_apparat.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_zapros_kadr_rsfsr"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_zapros_kadr_rsfsr.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_ispol_mest_intelegent"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_ispol_mest_intelegent.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_rash_otdel_milit"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_rash_otdel_milit.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_kontrol_prod"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_kontrol_prod.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_problem_prodvlst"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_problem_prodvlst.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_ukrpl_gos_apparat"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_ukrpl_gos_apparat.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_rashr_agitation"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_rashr_agitation.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_prosvsh_v_derevnyah"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_prosvsh_v_derevnyah.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_kontr_rev_borbya"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_kontr_rev_borbya.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_krasny_terror"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_krasny_terror.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_deistv_kont_razvedk"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_deistv_kont_razvedk.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_ukr_econom_poloshenie"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_ukr_econom_poloshenie.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_preksrsh_razboi"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_preksrsh_razboi.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_kolectivny_gos_hoz"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_kolectivny_gos_hoz.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_perespr_zemly"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_perespr_zemly.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_trudova_povinnost"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_trudova_povinnost.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_trudova_army"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_trudova_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_zapros_support_centr"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_zapros_support_centr.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_peshatanie_nominala"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_peshatanie_nominala.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_ediny_kommand_sostav"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_ediny_kommand_sostav.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_krestyanu_mobilib"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_krestyanu_mobilib.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_prisiv_lit_bel_shyastei"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_prisiv_lit_bel_shyastei.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_zapros_sovet_instrktr"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_zapros_sovet_instrktr.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_uskoren_oficer_obych"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_uskoren_oficer_obych.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_vosved_ukrpl"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_vosved_ukrpl.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_lit-bel_bastion"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_lit-bel_bastion.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_create_pol_sov_front"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_create_pol_sov_front.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_obsh_kommand_shtab_rsfsr"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_obsh_kommand_shtab_rsfsr.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_partizan_metod"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_partizan_metod.dds"
+	}
+	SpriteType = { 
+		name = "GFX_BLR_centr_krasny_army"
+		texturefile = "gfx/interface/goals/LitBlr/BLR_centr_krasny_army.dds"
+	}
 }

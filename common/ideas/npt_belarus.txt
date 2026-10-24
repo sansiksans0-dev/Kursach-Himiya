@@ -1,6 +1,327 @@
 ideas = {
 
 	country = {
+		BLR_work_shots_deficit = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = 0.45
+				political_power_factor = -0.2
+				high_command_cost_factor = 0.45
+                army_chief_cost_factor = 0.45
+                unit_leader_as_advisor_cp_cost_factor = 0.45
+				command_power_gain = -0.1
+			}
+		}
+		BLR_prosvet_v_derevne = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				compliance_growth = 0.10
+				resistance_target = 0.10
+			}
+			}
+			BLR_fight_against_contrrevolution = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+			}
+			BLR_ukr_econom_poloshenie = {
+			picture = 
+			
+			allowed = {
+				always = yes
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = { 
+				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+				industry_free_repair_factor = 0.1
+		    
+			} 
+			}
+			BLR_trudova_povinnost = {
+			picture = 
+			
+			allowed = {
+				always = yes
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = { 
+			production_efficiency_cap_factor = 0.2 
+			} 
+			}
+		BLR_work_shots_deficit_1 = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = 0.30
+				political_power_factor = -0.1
+				high_command_cost_factor = 0.30
+                army_chief_cost_factor = 0.30
+                unit_leader_as_advisor_cp_cost_factor = 0.30
+				command_power_gain = -0.1
+			}
+		}
+		BLR_Lithuanian_Belarusian_split = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.005
+				drift_defence_factor = -0.2
+				party_popularity_stability_factor = -0.15
+				defensive_war_stability_factor = -0.1
+			}
+			}
+			BLR_Lithuanian_Belarusian_split_1 = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				drift_defence_factor = -0.15
+				party_popularity_stability_factor = -0.1
+				defensive_war_stability_factor = -0.1
+			}
+			} 
+		BLR_crisis_of_legitimacy = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.1
+				resistance_target = 0.1
+				stability_factor = -0.15
+				political_power_gain = -0.2
+				recruitable_population_factor = -0.15
+				trade_opinion_factor = -0.3
+				improve_relations_maintain_cost_factor = 0.2
+			}
+		}
+		BLR_Sovereign_buffer = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = -1
+				political_power_factor = -0.5
+				disabled_ideas = 1
+			}
+		}
+		BLR_Red_Terror = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.15
+				root_out_resistance_efficiency_factor = 0.50
+				social_democracy_drift = -0.06
+				social_liberalism_drift = -0.06
+				market_liberalism_drift = -0.06
+				conservatism_drift = -0.06
+				despotism_drift = -0.06
+				authoritarism_drift = -0.06
+				fascism_drift = -0.06
+				national_syndicalism_drift = -0.06
+			}
+		}
+		BLR_counterrevolutionary_resistance = {
+			picture =  
+			
+		
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				resistance_activity = 0.5
+				compliance_growth_on_our_occupied_states = 0.3
+				resistance_target = 0.3
+				stability_factor = -0.1
+				political_power_gain = -0.5
+				social_democracy_drift = 0.03
+				social_liberalism_drift = 0.02
+				conservatism_drift = 0.02
+			}
+		}	
+		BLR_counterrevolutionary_resistance_1 = {
+			picture =  
+			
+		
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				resistance_activity = 0.3
+				compliance_growth_on_our_occupied_states = 0.1
+				resistance_target = 0.2
+				political_power_gain = -0.3
+				radical_socialism_drift = 0.01
+				social_democracy_drift = 0.01
+				social_liberalism_drift = 0.01
+				conservatism_drift = 0.01
+			}
+		}	
+		BLR_counterrevolutionary_resistance_2 = {
+			picture =  
+			
+		
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				resistance_activity = 0.1
+				resistance_target = 0.1
+				political_power_gain = -0.15
+			}
+		}	
+		BLR_crisis_of_legitimacy = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				resistance_activity = 0.3
+				compliance_growth_on_our_occupied_states = 0.1
+				resistance_target = 0.1
+				stability_factor = -0.15
+				political_power_gain = -0.1
+				recruitable_population_factor = -0.3
+			}
+		}    
+		BLR_CHK_LitBel = {
+			picture = 
+			
+			allowed = {
+				always = no
+			}
+				
+			allowed_civil_war = {
+				}
+	
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = -0.20
+				drift_defence_factor = 0.20
+				resistance_growth = -0.10
+				resistance_damage_to_garrison_on_our_occupied_states = 0.15
+			}
+		}    
 		BLR_bvk = {
 			picture = BLR_bvk
 			

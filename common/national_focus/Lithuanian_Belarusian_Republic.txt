@@ -2,6 +2,10 @@ focus_tree = {
 	id = Lithuanian_Belarusian_Republic
 	country = {
 		factor = 0
+		modifier = {
+			add = 10
+			tag = no
+		}
 	}
 	default = no
 	continuous_focus_position = { x = 300 y = 50 }
@@ -11,6 +15,9 @@ focus_tree = {
 		id = BLR_sovmest_zased
 		icon = GFX_BLR_sovmest_zased
 		cost = 0.8
+		completion_reward = {
+
+	 }
 		available = {
 		    
 		}
